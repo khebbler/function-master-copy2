@@ -103,6 +103,16 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
+    // checking if object has a noises array
+    if (object.noises && Array.isArray(object.noises)) {
+        // returning noises seperated by a space
+        return object.noises.join(" ");
+    // if there are no noises     
+    } else {
+        // return there are no noises
+        return "there are no noises"
+    }
+
 
 }
 
@@ -111,6 +121,15 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
+    // checking if word is in the string of words
+    if (string.includes(word)) {
+        // if yes return true
+        return true;
+    // otherwise    
+    } else {
+        // return false
+        return false;
+    }
 
 }
 
