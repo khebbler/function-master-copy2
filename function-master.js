@@ -20,6 +20,8 @@ function objectValues(object) {
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+    // returning an array of object's keys and joining with a space
+    return Object.keys(object).join(' ');
 
 }
 
@@ -28,6 +30,7 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
+
     
 }
 
@@ -36,7 +39,16 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    
+    // checking if collection is an array
+    if (Array.isArray(collection)) {
+        // returning array
+        return 'array';
+    // checking if collection is an object    
+    } else if (typeof collection === 'object') {
+        // returning object
+        return 'object';
+    }
+
 }
 
 //////////////////////////////////////////////////////////////////////
