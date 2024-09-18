@@ -138,6 +138,8 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
+    // initializing empty array of object's friends
+
 
 }
 
