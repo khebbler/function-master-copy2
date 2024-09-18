@@ -3,7 +3,16 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
-    // code
+    // initiating storage array for values
+    let arrayOfValues = [];
+    // looping through input object
+    for (var key in object) {
+        // adding object's keys to arrayofValues
+        arrayOfValues.push(object[key]);
+    }
+    // returning a new array of the object's values
+    return arrayOfValues;
+
 } 
 
 //////////////////////////////////////////////////////////////////////
