@@ -88,6 +88,13 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+    // capitalizing the first letter in object's name property
+    var name = object.name.charAt(0).toUpperCase() + object.name.slice(1).toLowerCase();
+    // capitalizing the first letter in object's species property
+    var species = object.species.charAt(0).toUpperCase() + object.species.slice(1).toLowerCase();
+
+    // returning Name is a Species
+    return name + " is a " + species;
 
 }
 
