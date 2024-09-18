@@ -66,6 +66,8 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
+    // 
+
     
 }
 
@@ -74,6 +76,10 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+    // capitalizing the first letter in object's name property
+    var name = object.name.charAt(0).toUpperCase() + object.name.slice(1).toLowerCase();
+    // returning Welcome Name!
+    return "Welcome " + name + "!"; 
 
 }
 
