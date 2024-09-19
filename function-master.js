@@ -140,7 +140,7 @@ function hasWord(string, word) {
 function addFriend (name, object) {
     // adding name to object's friends array
     object.friends.push(name); 
-    // returning object
+    // returning updated object
     return object;
 
 }
@@ -188,6 +188,10 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
+    // setting object key to equal value
+    object[key] = value;
+    // returning updated object
+    return object;
 
 }
 
@@ -196,7 +200,13 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+    // looping through array of strings
+    for (var i = 0; i < array.length; i++) {
+        // removing properties on object that are listed in array
+        delete object[array[i]];
+    }
+    // returning updated object
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -204,6 +214,18 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+    // initializing storage array for removed duplicates
+    var removed = [];
+    // looping through input array
+    for (var i = 0; i < array.length; i++) {
+        // checking if the current element is not already in the removed array
+        if (!removed.includes(array[i])) {
+            // adding to removed array
+            removed.push(array[i]);
+        }
+    }
+    // returning removed array
+    return removed;
 
 }
 
