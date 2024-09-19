@@ -166,6 +166,20 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
+    // initializing storage array for non-friends
+    var nonFriends = []
+    // looping over array of people
+    for (var i = 0; i < array.length; i++) {
+        // initializing person varibale for clarity
+        var person = array[i];
+        // checking if person is not friends with name
+        if (person.name !== name && (!person.friends || !person.friends.includes(name))) {
+            // adding person's name to non-friends array
+            nonFriends.push(person.name);
+        }
+    }
+    // returning nonFriends array
+    return nonFriends;
 
 }
 
