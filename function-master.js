@@ -30,8 +30,19 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
+    // initializing storage array for string values
+    var strings = [];
+    // looping through input object
+    for (var key in object) {
+        // checking if value is a string
+        if (typeof object[key] === 'string') {
+            // adding string values to strings array
+            strings.push(object[key]);
+        }
+    }
+    // returning string values seperated by a space
+    return strings.join(' ');
 
-    
 }
 
 //////////////////////////////////////////////////////////////////////
