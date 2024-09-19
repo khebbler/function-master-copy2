@@ -150,6 +150,14 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
+    // checking if object has friends property and includes name
+    if (object.friends && object.friends.includes(name)) {
+        // if yes, return true
+        return true;
+    // otherwise, return false    
+    } else {
+        return false;
+    }
 
 }
 
