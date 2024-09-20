@@ -77,7 +77,25 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    // 
+    // splitting string into an array of words
+    var words = string.split(' ');
+    // initializing a storage variable for capitalized words
+    var capitalizedWords = [];
+
+    // Looping through array or words
+    for (var i = 0; i < words.length; i++) {
+        // initializing word variable
+        var word = words[i];
+
+        // capitalizing the first letter of each word
+        var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+
+        // pushing updated words to capitalizedWords 
+        capitalizedWords.push(capitalizedWord);
+
+    }
+    // returning capitalized words in one string
+    return capitalizedWords.join(' ');
 
     
 }
